@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sistem Pinjam Uang Mama Tiara</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+<main class="access-screen" id="accessScreen">
+    <section class="access-card" aria-labelledby="accessTitle">
+        <p class="eyebrow">SISTEM PINJAM UANG MAMA TIARA</p>
+        <h1 id="accessTitle">Selamat Datang</h1>
+        <p class="access-description">Masukkan kata sandi untuk membuka sistem.</p>
+        <form class="access-form" id="accessForm">
+            <label for="accessPassword">Kata sandi</label>
+            <input
+                type="password"
+                id="accessPassword"
+                name="password"
+                placeholder="Masukkan kata sandi"
+                autocomplete="current-password"
+                required>
+            <button type="submit">Buka Sistem</button>
+            <p class="access-feedback" id="accessFeedback" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<div id="systemContent" hidden>
+<div class="money-rain" aria-hidden="true">
+    <div class="money-tree money-tree--left">
+        <div class="tree-canopy">
+            <span class="tree-leaf leaf-a"></span><span class="tree-leaf leaf-b"></span>
+            <span class="tree-leaf leaf-c"></span><span class="tree-leaf leaf-d"></span>
+            <span class="tree-leaf leaf-e"></span><span class="tree-leaf leaf-f"></span>
+            <span class="tree-leaf leaf-g"></span><span class="tree-leaf leaf-h"></span>
+            <span class="tree-leaf leaf-i"></span>
+        </div>
+        <span class="tree-branch branch-left"></span>
+        <span class="tree-branch branch-right"></span>
+        <span class="tree-trunk"></span>
+    </div>
+    <div class="money-tree money-tree--right">
+        <div class="tree-canopy">
+            <span class="tree-leaf leaf-a"></span><span class="tree-leaf leaf-b"></span>
+            <span class="tree-leaf leaf-c"></span><span class="tree-leaf leaf-d"></span>
+            <span class="tree-leaf leaf-e"></span><span class="tree-leaf leaf-f"></span>
+            <span class="tree-leaf leaf-g"></span><span class="tree-leaf leaf-h"></span>
+            <span class="tree-leaf leaf-i"></span>
+        </div>
+        <span class="tree-branch branch-left"></span>
+        <span class="tree-branch branch-right"></span>
+        <span class="tree-trunk"></span>
+    </div>
+    <div class="falling-wealth">
+        <span class="fall-item fall-bill drop-col-1 wave-1"><b>Rp</b><strong>100</strong></span>
+        <span class="fall-item fall-coin drop-col-2 wave-1">Rp</span>
+        <span class="fall-item fall-bill drop-col-3 wave-1"><b>Rp</b><strong>50</strong></span>
+        <span class="fall-item fall-gold drop-col-4 wave-1"><b>Au</b></span>
+        <span class="fall-item fall-bill drop-col-5 wave-1"><b>Rp</b><strong>100</strong></span>
+        <span class="fall-item fall-coin drop-col-6 wave-1">Rp</span>
+        <span class="fall-item fall-bill drop-col-7 wave-1"><b>Rp</b><strong>20</strong></span>
+        <span class="fall-item fall-coin drop-col-8 wave-1">Rp</span>
+
+        <span class="fall-item fall-coin drop-col-1 wave-2">Rp</span>
+        <span class="fall-item fall-bill drop-col-2 wave-2"><b>Rp</b><strong>50</strong></span>
+        <span class="fall-item fall-coin drop-col-3 wave-2">Rp</span>
+        <span class="fall-item fall-gold drop-col-4 wave-2"><b>Au</b></span>
+        <span class="fall-item fall-coin drop-col-5 wave-2">Rp</span>
+        <span class="fall-item fall-bill drop-col-6 wave-2"><b>Rp</b><strong>100</strong></span>
+        <span class="fall-item fall-gold drop-col-7 wave-2"><b>Au</b></span>
+        <span class="fall-item fall-bill drop-col-8 wave-2"><b>Rp</b><strong>20</strong></span>
+
+        <span class="fall-item fall-bill drop-col-1 wave-3"><b>Rp</b><strong>50</strong></span>
+        <span class="fall-item fall-coin drop-col-2 wave-3">Rp</span>
+        <span class="fall-item fall-bill drop-col-3 wave-3"><b>Rp</b><strong>100</strong></span>
+        <span class="fall-item fall-gold drop-col-4 wave-3"><b>Au</b></span>
+        <span class="fall-item fall-bill drop-col-5 wave-3"><b>Rp</b><strong>20</strong></span>
+        <span class="fall-item fall-coin drop-col-6 wave-3">Rp</span>
+        <span class="fall-item fall-bill drop-col-7 wave-3"><b>Rp</b><strong>100</strong></span>
+        <span class="fall-item fall-coin drop-col-8 wave-3">Rp</span>
+
+        <span class="fall-item fall-coin drop-col-1 wave-4">Rp</span>
+        <span class="fall-item fall-bill drop-col-2 wave-4"><b>Rp</b><strong>100</strong></span>
+        <span class="fall-item fall-coin drop-col-3 wave-4">Rp</span>
+        <span class="fall-item fall-gold drop-col-4 wave-4"><b>Au</b></span>
+        <span class="fall-item fall-coin drop-col-5 wave-4">Rp</span>
+        <span class="fall-item fall-bill drop-col-6 wave-4"><b>Rp</b><strong>50</strong></span>
+        <span class="fall-item fall-coin drop-col-7 wave-4">Rp</span>
+        <span class="fall-item fall-bill drop-col-8 wave-4"><b>Rp</b><strong>20</strong></span>
+    </div>
+</div>
+
+<header class="site-header">
+
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow">CATATAN PINJAMAN & PEMBAYARAN</p>
+            <h1>Sistem Pinjam Uang Mama Tiara</h1>
+            <p class="hero-description">
+                Semua pinjaman, bunga, dan cicilan tercatat rapi dalam satu tempat.
+            </p>
+        </div>
+
+        <div class="money-art" role="img" aria-label="Ilustrasi kartun uang rupiah">
+            <div class="coin coin-back"><span>Rp</span></div>
+            <div class="banknote banknote-back">
+                <span class="note-seal">Rp</span>
+                <span class="note-value">100</span>
+                <span class="note-caption">SERATUS RIBU</span>
+            </div>
+            <div class="banknote banknote-front">
+                <span class="note-seal">Rp</span>
+                <span class="note-value">50</span>
+                <span class="note-caption">LIMA PULUH RIBU</span>
+            </div>
+            <div class="coin coin-front"><span>Rp</span></div>
+            <span class="money-spark spark-one">+</span>
+            <span class="money-spark spark-two">✦</span>
+        </div>
+    </div>
+
+</header>
+
+
+<p class="app-status" id="appStatus" role="status" aria-live="polite">
+    Menghubungkan ke database...
+</p>
+
+
+<nav class="section-nav" aria-label="Menu sistem">
+    <button type="button" class="section-nav__item" data-view="ringkasan" aria-current="page">Ringkasan</button>
+    <button type="button" class="section-nav__item" data-view="semua">Semua Data</button>
+    <button type="button" class="section-nav__item" data-view="nasabah">Data Nasabah</button>
+    <button type="button" class="section-nav__item" data-view="petugas">Data Petugas</button>
+    <button type="button" class="section-nav__item" data-view="pinjaman">Data Pinjaman</button>
+    <button type="button" class="section-nav__item" data-view="pembayaran">Data Pembayaran</button>
+</nav>
+
+
+<main class="container" inert>
+
+
+    <!-- ========================= -->
+    <!-- DASHBOARD -->
+    <!-- ========================= -->
+
+    <section class="dashboard" data-view-panel="ringkasan">
+
+        <div class="card">
+
+            <h3>Total Nasabah</h3>
+
+            <p id="totalNasabah">
+                ...
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Pinjaman</h3>
+
+            <p id="totalPinjaman">
+                ...
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Tagihan + Bunga</h3>
+
+            <p id="totalDipinjam">
+                ...
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Pembayaran</h3>
+
+            <p id="totalDibayar">
+                ...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- ENTITAS NASABAH -->
+    <!-- ========================= -->
+
+    <section class="box" data-view-panel="nasabah">
+
+        <h2>Data Nasabah</h2>
+
+        <form id="nasabahForm">
+
+            <input
+                type="hidden"
+                id="idNasabah">
+
+
+            <input
+                type="text"
+                id="namaNasabah"
+                placeholder="Nama Nasabah"
+                required>
+
+
+            <input
+                type="text"
+                id="noTelepon"
+                placeholder="Nomor Telepon">
+
+
+            <input
+                type="text"
+                id="alamat"
+                placeholder="Alamat">
+
+
+            <input
+                type="text"
+                id="noRekening"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="Nomor Rekening">
+
+
+            <select id="bankNasabah" aria-label="Pilih Bank">
+                <option value="">Pilih Bank</option>
+                <option value="Bank DKI">Bank DKI</option>
+                <option value="BCA">BCA</option>
+                <option value="Mandiri">Mandiri</option>
+                <option value="BNI">BNI</option>
+                <option value="BTN">BTN</option>
+                <option value="BRI">BRI</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+
+
+            <input
+                type="text"
+                id="bankLainnya"
+                class="bank-other"
+                placeholder="Tulis nama bank"
+                autocomplete="organization"
+                hidden>
+
+
+            <button type="submit">
+                Simpan Nasabah
+            </button>
+
+        </form>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>No. Telepon</th>
+                    <th>Alamat</th>
+                    <th>No. Rekening</th>
+                    <th>Bank</th>
+                    <th>Aksi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="nasabahTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- ENTITAS PETUGAS -->
+    <!-- ========================= -->
+
+    <section class="box" data-view-panel="petugas">
+
+        <h2>Data Petugas</h2>
+
+
+        <label for="pinjamanPetugas">Pilih petugas untuk pinjaman</label>
+        <select
+            id="pinjamanPetugas"
+            class="staff-picker"
+            form="pinjamanForm"
+            required>
+            <option value="">Pilih Petugas</option>
+        </select>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- ENTITAS PINJAMAN -->
+    <!-- ========================= -->
+
+    <section class="box" data-view-panel="pinjaman">
+
+        <h2>Data Pinjaman</h2>
+
+
+        <form id="pinjamanForm">
+
+
+            <input
+                type="hidden"
+                id="idPinjaman">
+
+
+            <input
+                type="text"
+                id="pinjamanNasabah"
+                placeholder="Ketik nama nasabah terdaftar"
+                autocomplete="off"
+                required>
+
+
+            <input
+                type="date"
+                id="tanggalPinjaman"
+                required>
+
+
+            <input
+                type="number"
+                id="jumlahPinjaman"
+                placeholder="Jumlah Pinjaman"
+                min="1"
+                step="0.01"
+                required>
+
+
+            <input
+                type="number"
+                id="bunga"
+                placeholder="Bunga per bulan (%)"
+                min="0.01"
+                step="0.01"
+                required>
+
+
+            <input
+                type="number"
+                id="lamaPinjaman"
+                placeholder="Lama Pinjaman (bulan)"
+                min="1"
+                step="1"
+                required>
+
+
+            <select id="statusPinjaman">
+
+                <option value="Berjalan">
+                    Berjalan
+                </option>
+
+                <option value="Lunas">
+                    Lunas
+                </option>
+
+                <option value="Macet">
+                    Macet
+                </option>
+
+            </select>
+
+
+            <p class="form-summary" id="ringkasanPinjaman" aria-live="polite">
+                Isi modal, bunga bulanan, dan lama pinjaman untuk melihat total tagihan.
+            </p>
+
+
+            <button type="submit">
+                Simpan Pinjaman
+            </button>
+
+        </form>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Nasabah</th>
+                    <th>Petugas</th>
+                    <th>Tanggal</th>
+                    <th>Modal</th>
+                    <th>Bunga / Bulan</th>
+                    <th>Total Bunga</th>
+                    <th>Total Tagihan</th>
+                    <th>Terbayar</th>
+                    <th>Sisa</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="pinjamanTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- ENTITAS PEMBAYARAN -->
+    <!-- ========================= -->
+
+    <section class="box" data-view-panel="pembayaran">
+
+        <h2>Data Pembayaran</h2>
+
+
+        <form id="pembayaranForm">
+
+
+            <input
+                type="hidden"
+                id="idPembayaran">
+
+
+            <input
+                type="text"
+                id="pembayaranPinjaman"
+                inputmode="numeric"
+                placeholder="Ketik ID pinjaman, contoh: 12"
+                autocomplete="off"
+                required>
+
+
+            <p class="form-summary" id="sisaPembayaran" aria-live="polite">
+                Ketik ID pinjaman untuk melihat sisa tagihan.
+            </p>
+
+
+            <input
+                type="date"
+                id="tanggalBayar"
+                required>
+
+
+            <input
+                type="number"
+                id="jumlahBayar"
+                placeholder="Jumlah Pembayaran"
+                min="0.01"
+                step="0.01"
+                required>
+
+
+            <input
+                type="text"
+                id="keterangan"
+                placeholder="Keterangan">
+
+
+            <button type="submit">
+                Simpan Pembayaran
+            </button>
+
+        </form>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>ID Pinjaman</th>
+                    <th>Tanggal</th>
+                    <th>Jumlah</th>
+                    <th>Keterangan</th>
+                    <th>Aksi</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="pembayaranTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+</main>
+
+</div>
+
+<script
+    type="module"
+    src="../js/script.js">
+</script>
+
+
+</body>
+
+</html>

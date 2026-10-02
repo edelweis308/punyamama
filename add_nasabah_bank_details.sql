@@ -1,0 +1,3 @@
+ALTER TABLE public.nasabah
+    ADD COLUMN IF NOT EXISTS no_rekening VARCHAR(50),
+    ADD COLUMN IF NOT EXISTS nama_bank VARCHAR(100);
